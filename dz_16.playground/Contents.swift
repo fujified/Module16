@@ -37,24 +37,25 @@ humanTwo.name
 humanTwo.surname
 
 // 2 //
-let daysInMonth = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+let daysInMonth = ["31", "29", "31", "30", "31", "30", "31", "31", "30", "31", "30", "31"]
 
 for days in daysInMonth {
     print(days)
 }
 
 
+var months = ["January", "February", "March", "April", "May", "June", "Jule", "August", "September", "October", "November", "December"]
+
+    for (days, month) in zip(daysInMonth, months) {
+        print("\(month): \(days)")
+    }
+    
+    
 
 
-let monthNames = ["January", "February", "March", "April", "May", "June", "Jule", "August", "September", "October", "November", "December"]
-monthNames.forEach {
-    print("\($0): \(daysInMonth[0])")
-}
 
 
-
-
-let months = (January: 31, February: 29, March: 31, April: 30, May: 31, June: 30, Jule: 31, August: 31, September: 30, October: 31, November: 30, December: 31)
+var monthsTulpe = (January: 31, February: 29, March: 31, April: 30, May: 31, June: 30, Jule: 31, August: 31, September: 30, October: 31, November: 30, December: 31)
 
 
 
