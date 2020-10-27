@@ -43,9 +43,21 @@ for days in daysInMonth {
     print(days)
 }
 
-let monthNames = ["January", "February", "March", "April", "May", "June", "Jule", "August", "September", "October", "November", "December"]
 
-for month in monthNames {
-    print("\(month): \(daysInMonth[0])")
+
+
+let monthNames = ["January", "February", "March", "April", "May", "June", "Jule", "August", "September", "October", "November", "December"]
+monthNames.forEach {
+    print("\($0): \(daysInMonth[0])")
 }
+
+
+
+
+let months = (January: 31, February: 29, March: 31, April: 30, May: 31, June: 30, Jule: 31, August: 31, September: 30, October: 31, November: 30, December: 31)
+
+
+
+
+
 // 3 //
