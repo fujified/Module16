@@ -44,21 +44,39 @@ for days in daysInMonth {
 }
 
 
-var months = ["January", "February", "March", "April", "May", "June", "Jule", "August", "September", "October", "November", "December"]
-
-    for (days, month) in zip(daysInMonth, months) {
-        print("\(month): \(days)")
-    }
-    
-    
+let monthNames = ["January", "February", "March", "April", "May", "June", "Jule", "August", "September", "October", "November", "December"]
 
 
+for (days, months) in zip(daysInMonth, monthNames) {
+    print("\(months): \(days)")
+}
 
+for (days, months) in zip(daysInMonth.reversed(), monthNames) {
+    print("\(months): \(days)")
+}
 
-var monthsTulpe = (January: 31, February: 29, March: 31, April: 30, May: 31, June: 30, Jule: 31, August: 31, September: 30, October: 31, November: 30, December: 31)
-
-
-
-
+var monthsTuple = (January: 31, February: 29, March: 31, April: 30, May: 31, June: 30, Jule: 31, August: 31, September: 30, October: 31, November: 30, December: 31)
 
 // 3 //
+var students = ["Bob Green": 4]
+students.updateValue(5, forKey: "Bob Green")
+print(students)
+for (name, rating) in students {
+    if rating >= 3  {
+        print("Congratulation \(name), your rating is \(rating)")
+    } else {
+        print("Oopps, your rating is \(rating), you have to retakean exam")
+    }
+}
+students["John Doe"] = 3
+students["Martha Cooper"] = 4
+students["Robert Klein"] = 2
+print(students)
+students.removeValue(forKey: "Robert Klein")
+print(students)
+
+let sumOfScore = students.reduce(0.0) { $0 + Double($1.value) }
+print(sumOfScore)
+
+let averageScore = (sumOfScore / Double(students.count))
+print(averageScore)
